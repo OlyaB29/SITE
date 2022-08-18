@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Создание задачи
+{% endblock %}
+
+{% block content %}
+<h1>Создать новую задачу</h1>
+<div class="h-100 p-5 text-bg-dark rounded-3">
+    <form method="post">
+        <input type="text" placeholder="Введите название" class="form-control"><br>
+        <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
+        <div class="col-md-2">
+            <input type="number" placeholder="Введите максим. балл" class="form-control"><br>
+        </div>
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+</div>
+{% endblock %}

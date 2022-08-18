@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Страница про нас
+{% endblock %}
+
+{% block content %}
+<h1>Страница про нас</h1>
+<p>Страница про нас</p>
+<div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">OVERONE - IT компания</h1>
+    <p class="col-md-8 fs-4">Деятельность направлена на разработку программного обеспечения, сайтов и автоматизацию бизнес-процессов, а также обучение квалифицированных IT специалистов.</p>
+    <a href="{% url 'home' %}">
+        <button class="btn btn-primary btn-lg" type="button" >Главная</button>
+    </a>
+</div>
+<div class="row align-items-md-stretch">
+    <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Наши курсы</h2>
+            <p>Вам предоставлена возможность выбрать индивидуальное обучение, групповые занятия Online или групповые занятия Offline по следующим направлениям:</p>
+            <p>1. Python</p>
+            <p>2. Java</p>
+            <p>3. Front-end</p>
+            <p>4. (UI/UX)</p>
+            <a href="{% url 'contacts' %}">
+                <button class="btn btn-outline-light" type="button">Контакты</button>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>КМР - это курс молодого разработчика</h2>
+            <p>Вместе с ним вы в 2 раза быстрее вольетесь в сферу IT и обучение пойдет намного проще.</p>
+            <a href="{% url 'YDC' %}">
+                <button class="btn btn-outline-secondary" type="button">Подробнее</button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
