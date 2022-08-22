@@ -8,12 +8,14 @@
 <h1>Создать новую задачу</h1>
 <div class="h-100 p-5 text-bg-dark rounded-3">
     <form method="post">
-        <input type="text" placeholder="Введите название" class="form-control"><br>
-        <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
+        {% csrf_token %}
+        {{form.title}}<br>
+        {{form.task}}<br>
         <div class="col-md-2">
-            <input type="number" placeholder="Введите максим. балл" class="form-control"><br>
+            {{form.grade}}<br>
         </div>
         <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{error}}</span>
     </form>
 </div>
 {% endblock %}
